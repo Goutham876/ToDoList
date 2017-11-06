@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>todo</title>
+  <link rel='stylesheet' href='./style.css'>
+  <script src="./index.js"></script>
+</head>
+<body onload='renderTodo()'>
+
+  <div id ='todoList'>
+
+  </div>
+
+<div>
+  <fieldset>
+  <legend>
+  <strong>Add a new to do item</strong>
+  </legend>
+  <table>
+  <tr><td> Task:</td>
+    <td><input type='text' name='todo' id='input1'/></td>
+  </tr>
+  <tr>
+    <td>Who should do it:</td>
+      <td><input type='text' name='todo' id='input2'/></td>
+    </tr>
+    <tr><td>Date:</td>
+        <td><input type='date' name='todo' id='input3'/></td>
+      </tr>
+    </table>
+
+        <button type='button' onclick='handleSubmit()'>Create List</button>
+  </fieldset>
+
+
+  <fieldset>
+    <legend><strong>Select Sorting Options</strong></legend>
+    <table>
+      <tr><button type = "button" onclick = "sortById()">sortbyID</button></tr>
+
+      <fieldset>
+      <div id ="sorted1"></div>
+      </fieldset>
+      <tr><button type = "button" onclick = "sortByName()">sortbyName</button></tr>
+      <fieldset>
+      <div id = "sorted2"</div>
+      </fieldset>
+
+
+    </table>
+  </fieldset>
+
+  <fieldset>
+  <legend><strong>Pagination Window</strong></legend>
+  <div style="text-align:center;">
+      <button type ="button" onclick="load()">PAGINATED VIEW</button><br/>
+      <input type="button" id="first" onclick="firstPage()" value="page1" />
+      <input type="button" id="next" onclick="nextPage()" value="next" />
+      <input type="button" id="previous" onclick="previousPage()" value="previous" />
+      <input type="button" id="last" onclick="lastPage()" value="last" />
+
+      <div id="list"></div>
+      </div>
+
+</div>
+  </fieldset>
+  <fieldset>
+    <legend><strong>Search Option</strong></legend>
+    <input type='text' name= "searchBar"id='search'>
+    <button type="button" onclick ="searchByName()">SearchByName</button>
+
+    <div id="renderSearch"></div>
+  </fieldset>
+
+
+
+
+  <!--<div>
+
+      <label>add todo</label>
+      <input type='text' name='todo' id='addTodo'/>
+      <button type='button' onclick='handleSubmit()'>add todo</button>
+
+  </div>-->
+
+  <!--<script src='sample.js'></script>-->
+</body>
+</html>
